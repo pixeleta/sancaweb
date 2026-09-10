@@ -140,7 +140,7 @@ nav{
   height: 180px;
 }
 
- ul{
+ul{
   display:flex;
   flex-direction: row;
   list-style: none;
@@ -397,14 +397,14 @@ nav{
   padding-left: 50px;
 }
 
-ul {
+.carrousel{
   width: 100vw;
   height: 150px;
   padding: 20px;
   display:flex;
   gap: 1vw;
 }
-li {
+.carrousel li {
   list-style-type: none;
   background-color: #0da23c;
   border: 1px solid #893b3b;
@@ -415,10 +415,10 @@ li {
 
 li:nth-child(even) {
   background-color: rgb(44, 14, 193);
-}ul {
+}.carrousel{
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
 }
-li {
+.carrousel li {
   scroll-snap-align: center;
 }
