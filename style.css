@@ -150,19 +150,48 @@ nav{
 
 
 /* Contenedor de Cursos */  
+/*lili-lili-lili-lili*/ 
+
+.agrupacion {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+
+
+}
 
 .carta-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 500px;
+
+}
+
+.carta-container h4 {
+    overflow-wrap: break-word;
+
+}
+.carta-container h1 {
+  font-size: 20px;
+
+}
+
+.carta{
   display: flex;
   flex-direction: column;
   align-items: center;
   
 }
 
-.carta{
+.caja {
+
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  
+
 }
 
 
