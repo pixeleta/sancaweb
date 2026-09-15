@@ -115,10 +115,10 @@ body {
 
 /*Estilos de Header y Navbar*/
 header{
-  background:#1e3a8a(61, 125, 221, 0.897);
+  background:#1e3a8a;
   font-family: 'MONSERRAT bold italic';
-  border-radius: 30px; 
-  
+  border-radius: 15px; 
+}
 
 nav{
   display: flex;
