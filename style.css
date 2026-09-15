@@ -12,7 +12,105 @@
 
 
 main{
-  font-family: 'Romanica';
+  font-family: 'Romanica';/* Estilos globales básicos */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    font-family: sans-serif;
+}
+/* Estilos globales básicos */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    font-family: sans-serif;
+}
+
+/* 1. Contenedor restrictivo externo */
+.carrusel-contenedor {
+    width: 90%;
+    max-width: 800px;
+    overflow: hidden; /* Oculta barras de scroll por defecto si se desea */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* 2. Track deslizable con Flexbox */
+.carrusel-track {
+    display: flex;
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    scroll-behavior: smooth; /* Suaviza el movimiento */
+    
+    /* Propiedades clave de Scroll Snap */
+    scroll-snap-type: x mandatory; 
+    
+    /* Ocultar barra de scroll en navegadores modernos */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Ocultar barra de scroll en Chrome, Safari y Opera */
+.carrusel-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* 3. Estilo para cada una de las 10 imágenes */
+.carrusel-track img {
+    width: 100%; /* Cada imagen ocupa todo el ancho del contenedor */
+    flex-shrink: 0; /* Evita que las imágenes se compriman */
+    height: 450px;
+    object-fit: cover; /* Mantiene la proporción de aspecto sin deformar */
+    
+    /* Alineación del punto de parada del scroll */
+    scroll-snap-align: start; 
+}
+
+/* 1. Contenedor restrictivo externo */
+.carrusel-contenedor {
+    width: 90%;
+    max-width: 800px;
+    overflow: hidden; /* Oculta barras de scroll por defecto si se desea */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* 2. Track deslizable con Flexbox */
+.carrusel-track {
+    display: flex;
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    scroll-behavior: smooth; /* Suaviza el movimiento */
+    
+    /* Propiedades clave de Scroll Snap */
+    scroll-snap-type: x mandatory; 
+    
+    /* Ocultar barra de scroll en navegadores modernos */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Ocultar barra de scroll en Chrome, Safari y Opera */
+.carrusel-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* 3. Estilo para cada una de las 10 imágenes */
+.carrusel-track img {
+    width: 100%; /* Cada imagen ocupa todo el ancho del contenedor */
+    flex-shrink: 0; /* Evita que las imágenes se compriman */
+    height: 450px;
+    object-fit: cover; /* Mantiene la proporción de aspecto sin deformar */
+    
+    /* Alineación del punto de parada del scroll */
+    scroll-snap-align: start; 
+}
+
 }
 
 /*Estilos de Header y Navbar*/
@@ -42,7 +140,7 @@ nav{
   height: 180px;
 }
 
- ul{
+ul{
   display:flex;
   flex-direction: row;
   list-style: none;
@@ -297,4 +395,30 @@ nav{
   display: flex;
   text-align: center;
   padding-left: 50px;
+}
+
+.carrousel{
+  width: 100vw;
+  height: 150px;
+  padding: 20px;
+  display:flex;
+  gap: 1vw;
+}
+.carrousel li {
+  list-style-type: none;
+  background-color: #0da23c;
+  border: 1px solid #893b3b;
+  padding: 20px;
+
+  flex: 0 0 25%;
+}
+
+.carousel li:nth-child(even) {
+  background-color: rgb(44, 14, 193);
+}.carrousel{
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+.carrousel li {
+  scroll-snap-align: center;
 }
