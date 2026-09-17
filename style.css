@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f2f5;
+    background-color: #eaedf1;
     font-family: sans-serif;
 }
 /* Estilos globales básicos */
@@ -31,7 +31,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f2f5;
+    background-color: #eaedf1;
     font-family: sans-serif;
 }
 
@@ -115,7 +115,7 @@ body {
 
 /*Estilos de Header y Navbar*/
 header{
-  background: rgba(61, 125, 221, 0.897);
+  background: #1e3a8a;
   font-family: 'Romanica';
   border-radius: 30px; 
 }
@@ -173,8 +173,6 @@ ul{
   width: 300px;
   top: 385px;
   left: 500px;
-
-  
 }
 
 
@@ -369,7 +367,7 @@ ul{
 /* Pie de página */
 
 .custom{
-  background-color: #000000;
+  background-color: #1e3a8a;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
