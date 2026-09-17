@@ -157,7 +157,11 @@ nav{
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
+  background: grey;
+  border: 1px solid black;
+  margin: 15px 20px;
+  margin-top: 5px;
 
 
 
@@ -168,8 +172,15 @@ nav{
   flex-direction: column;
   align-items: center;
   width: 400px;
-  height: 500px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 20px auto 5px;
+  padding-top: 50px;
 
+}
+
+.carta-container centro{
+  text-align: center;
 }
 
 .carta-container h4 {
