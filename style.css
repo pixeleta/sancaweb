@@ -12,17 +12,8 @@
 
 
 main{
-  font-family: 'Romanica';/* Estilos globales básicos */
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #eaedf1;
-    font-family: sans-serif;
-}
+  font-family: 'Romanica';
+  
 /* Estilos globales básicos */
 body {
     margin: 0;
