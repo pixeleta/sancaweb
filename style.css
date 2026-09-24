@@ -6,25 +6,14 @@
 
 /*Fuente personalizada*/
 @font-face{
-  font-family:'Romanica';
-  src: url(fonts/Romanica.ttf);
+  font-family:'Montserrat Bold Italic 700';
+  src: url(fonts/Montserrat\ Bold\ Italic\ 700.ttf);
+
+  font-family:'Inter Italic 400';
+  src: url(fonts/Inter\ Italic\ 400.ttf);
 }
 
 
-main{
-  font-family: 'Romanica';
-  
-/* Estilos globales básicos */
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #eaedf1;
-    font-family: sans-serif;
-}
 
 /* 1. Contenedor restrictivo externo */
 .carrusel-contenedor {
@@ -102,69 +91,170 @@ body {
     scroll-snap-align: start; 
 }
 
-}
+
 
 /*Estilos de Header y Navbar*/
 header{
-  background: #1e3a8a;
-  font-family: 'Romanica';
-  border-radius: 30px; 
-}
+  background: #034c91;
+  font-family: 'Montserrat Bold Italic 700';    /* Donde se aloja el logo y los links*/
+  }
 
 nav{
   display: flex;
+  flex-direction: row;
+  align-items: center;    /*todo su contenido de la barra*/
   justify-content: space-between;
-  align-items: center;
 }
+
 
 .logo{
   display: flex;
-  flex-direction: row;
-  font-size: 30px;
-  padding-left: 40px;
+  align-items: center;    /*alinea el contenido del div logo*/
+  gap: 10px ;
+  padding-left: 60px;
 }
 
-.logo2{
-  display: flex;
-  align-content: center;
-  flex-direction: row;
-  height: 180px;
+.logo span{
+  color: #e0ecf5;
+  font-size: 25px;     /*modifica el texto pegado al logo*/
 }
 
-ul{
+.logo img{
+  display :flex;
+  align-self: center;   /*modifica al logo*/
+  height: 120px;
+}
+
+
+/*modificacion links del navbar*/
+ ul{
   display:flex;
   flex-direction: row;
-  list-style: none;
   gap: 15px;
-  padding-right: 40px;
+  padding-right: 60px;
   font-size: 25px;
 }
-/*Cierre de estilos Header y Navbar*/
 
-/*Hero Imagen*/
-.bienvenida{
-  display: flex;
-  flex-direction: column;
+.navbar li{
+  list-style: none;    /*le elimina el estilo de la lista*/
 }
 
-.sanca{
-  position: relative;
+.navbar a{
+  text-decoration-line: none; /*a : significa los enlaces en el navbar - les quita el subrayado- */
+  color: #e0ecf5;
+}
+
+.navbar a:hover{
+  color: #7bd7a7;    /*le agrega color a cada enlace*/
+}
+
+/* cierre modificacion links del navbar*/
+
+#moreButton{
+  background: none;
+  padding: 0px 10px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #e0ecf5;
+}
+
+
+/*Cierre de estilos Header y Navbar*/
+
+
+
+/*Contenedor-Imagen*/
+
+.contenedor{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.conjunto{
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-bottom: 40px;
+}
+
+.conjunto h1{
+  color: #034c91;
+}
+
+.conjunto h2{
+  color: #aad7f9;
+}
+.parrafo2{
+ color: #034c91;
+ padding-left: 30px;
+}
+
+.emojiHorizontal{
+  color: #7bd7a7;
+  display: flex;
+  justify-items: center;
+  padding-left: 5px;
+}
+
+.bienvenida .sanca{
+  display: flex;
+  width :800px;
+  height: 457px;
+}
+
+/*Cierre Contenedor-Imagen*/
+
+/* Texto seccion 1 */
+
+.preparate{
   display: flex;
   flex-direction: row;
-  width: 1350px;
-  padding-top: 10px;
-  overflow: hidden;
+  padding-bottom: 40px;
+}
+
+.arco{
+  background-color: #c1ebd5;
+}
+
+.cuadro{
+  background-color: #c1ebd5;
+}
+
+.cuadro .mundo .cfp{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Cierre Texto seccion 1 */
+
+/* Texto seccion 2 */
+
+.preparate2{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+}
+
+.persona{
+  background-color: #c1ebd5;
+}
+
+.cuadro2{
+  background-color: #c1ebd5;
+  width: 100%;
   
 }
 
-.logo3{
-  position: absolute;
+.cuadro2 .cfp{
   display: flex;
   flex-direction: row;
-  width: 300px;
-  top: 385px;
-  left: 500px;
+  padding-left: 30px;
+  
 }
+
+/* Cierre Texto seccion 2 */ 
 
 
 /*Sobre Nosotros Estilos*/
@@ -175,7 +265,6 @@ ul{
   background-color: rgba(61, 125, 221, 0.897);
   
 }
-
 
 .descripcion{
   display: flex;
@@ -189,80 +278,50 @@ ul{
 /*Cierre de estilos sobre nosotros*/
 
 
-/* Configuración general de la sección */
-.valores-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Romanica';
-  text-align: center;
-  padding: 40px 60px;
-  margin: 0 auto;
-  background-color: rgba(61, 125, 221, 0.897);
-  border-radius: 40px;
-  max-width: 80%;
-}
-
-/*titulo valores*/
-.valores-titulo,h2{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-/* valores items */
-
-.valor-item{
-  background-color: #c4dcf7;
-  border-radius: 50px;
-  padding: 15px 15px;
-}
-
-/* valores grid */
-
-.valores-grid{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-}
-
-/* icono */
-
-.icon{
-  padding-top: 5px;
-}
-
-/* cierre de icono */
-
-
 /* Contenedor de Cursos */  
 
 .carta-container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  
+  justify-content: center;
+  gap: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .carta{
   display: flex;
   flex-direction: row;
   align-items: center;
-  
+  background-color: #c1ebd5;
 }
 
+.curso-content img{
+  width: 200px;
+  height: 200px;
+}
+
+.tituloCursos{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.iconoCursos{
+  padding-right: 10px;
+}
 
 /*Cierre tarjeta de curso*/
 
 
-
-/*Contacto*/
+/* Datos - Columna 1*/
 
 .alinear-contacto{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 .fila{
@@ -274,86 +333,41 @@ ul{
 
 .columna1{
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: row;
+  border-radius: 30px;
 }
 
 
 .columna1,.columna2{
   flex: 1;
   padding: 20px;
-  background-color: rgba(61, 125, 221, 0.897);
+  background-color: #c1ebd5
 }
 
-
-.columna1 input, 
-.columna1 textarea {
-  padding: 10px;
-  box-shadow: 5px 5px rgb(0, 0, 0);
-  border-radius: 5px;
-  resize: none;
+.contenedorUbicacion h2{
+  
+  padding: 20px 5px 5px 20px;
 }
 
-
-.message{
+.contenedorUbicacion img{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-self: center;
-  padding: 12px;
-  background-color:  rgba(56, 188, 206, 0.808);
-  color: rgb(0, 0, 0);
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 700;
-  width: 25%;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.733);
+  flex-direction: column;
+  padding-right: 20px;
 }
 
-::placeholder{
-  font-weight: 800;
-  color: #000000;
-}
+/* Cierre Datos - Columna 1 */
 
-/* cierre columna 1 */
 
-/* columna 2 */
+/* Mapa - Columna 2 */
 
 .columna2{
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  border-radius: 30px;
 }
 
-.info-item{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 20px;
-}
-
-.iconbox{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: rgba(56, 188, 206, 0.808);
-}
-
-.info-contenido{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-/*cierre de contacto*/
-
+/* Cierre Mapa - Columna 2 */
 
 /* Pie de página */
 
@@ -385,6 +399,8 @@ ul{
   text-align: center;
   padding-left: 50px;
 }
+
+/* Cierre Pie de Página*/
 
 .carrousel{
   width: 100vw;
