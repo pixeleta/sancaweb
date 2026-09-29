@@ -97,6 +97,9 @@
 header{
   background: #034c91;
   font-family: 'Montserrat Bold Italic 700';    /* Donde se aloja el logo y los links*/
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   }
 
 nav{
@@ -104,6 +107,7 @@ nav{
   flex-direction: row;
   align-items: center;    /*todo su contenido de la barra*/
   justify-content: space-between;
+  
 }
 
 
