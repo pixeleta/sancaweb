@@ -169,6 +169,7 @@ nav{
   display: flex;
   align-items: center;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .conjunto{
@@ -199,8 +200,9 @@ nav{
 
 .bienvenida .sanca{
   display: flex;
-  width :800px;
+  width: 800px;
   height: 457px;
+  
 }
 
 /*Cierre Contenedor-Imagen*/
@@ -210,6 +212,7 @@ nav{
 .preparate{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding-bottom: 40px;
 }
 
@@ -219,6 +222,7 @@ nav{
 
 .cuadro{
   background-color: #c1ebd5;
+  width: 100%;
 }
 
 .cuadro .mundo .cfp{
@@ -226,6 +230,20 @@ nav{
   flex-direction: row;
   justify-content: center;
 }
+
+.mundo{
+  display: flex;
+  flex-direction: row;
+  color: #034c91;
+}
+
+.cfp{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 65%;
+}
+
 
 /* Cierre Texto seccion 1 */
 
