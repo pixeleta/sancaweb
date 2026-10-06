@@ -1,5 +1,5 @@
 /* Contenedor principal de la tarjeta */
-.tarjeta-curso {
+.fondo {
   position: relative;
   width: 300px;
   height: 350px;
@@ -15,7 +15,7 @@
 }
 
 /* Contenido principal (parte superior) */
-.tarjeta-curso  {
+.fondo  {
   padding: 24px;
   height: 100%;
   display: flex;
@@ -25,22 +25,9 @@
   transition: transform 0.2s ease-in-out;
 }
 
-.tarjeta-curso__contenido h3 {
-  margin: 0 0 10px 0;
-  color: #2c3e50;
-  font-size: 1.4rem;
-}
-
-.tarjeta-curso__contenido p {
-  margin: 0;
-  color: #e1edee;
-  font-size: 0.95rem;
-  font-weight: bold;
-  line-height: 1.5;
-}
 
 /* Panel deslizante con información adicional (oculto abajo por defecto) */
-.tarjeta-curso__detalle {
+.cortina {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -60,7 +47,7 @@
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tarjeta-curso__detalle h4 {
+.cortina h4 {
   margin: 0 0 12px 0;
   font-size: 1.2rem;
   text-align: center;
@@ -68,19 +55,19 @@
   color: #3498db;
 }
 
-.tarjeta-curso__detalle ul {
+.cortina ul {
   margin: 0 0 20px 0;
   padding-left: 20px;
   font-size: 0.9rem;
   line-height: 1.6;
 }
 
-.tarjeta-curso__detalle li{
+.cortina li{
   color: #034c91;
  
 }
 
-.tarjeta-curso__btn {
+.btn {
   background-color: #3498db;
   color: white;
   border: none;
@@ -92,16 +79,16 @@
   align-self: flex-start;
 }
 
-.tarjeta-curso__btn:hover {
+.btn:hover {
   background-color: #2980b9;
 }
 
 /* Efecto al pasar el mouse (Hover) */
-.tarjeta-curso:hover .tarjeta-curso__detalle {
+.fondo:hover .cortina {
   transform: translateY(0); /* Desliza el panel hacia arriba ocupando toda la tarjeta */
 }
 
-.tarjeta-curso:hover .tarjeta-curso__contenido {
+.fondo:hover .tarjeta-curso__contenido {
   transform: translateY(-20px); /* Opcional: desplaza sutilmente el contenido original hacia arriba */
   opacity:  0.1; /* Lo atenúa para dar protagonismo al detalle */
 }
