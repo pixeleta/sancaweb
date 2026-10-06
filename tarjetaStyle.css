@@ -15,7 +15,7 @@
 }
 
 /* Contenido principal (parte superior) */
-.tarjeta-curso__contenido {
+.tarjeta-curso  {
   padding: 24px;
   height: 100%;
   display: flex;
