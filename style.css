@@ -112,7 +112,16 @@ nav{
   align-self: center;   /*modifica al logo*/
   height: 120px;
 }
-
+.logo2 img{
+  display: flex;
+  align-self: center;
+  height: 120px;
+}
+.textLogoNosotros {
+  color: #e0ecf5;
+  font-size: 25px;
+  padding-left: 60px;
+}
 
 /*modificacion links del navbar*/
  ul{
@@ -266,12 +275,23 @@ nav{
 /*Sobre Nosotros Estilos*/
 .nosotros-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   background-color: rgba(61, 125, 221, 0.897);
   
 }
+.imagenSomos {
+  display: flex;
+  width: 500px;
+  height: 375px;
+  border-radius: 15px;
+  padding: 20px;
+  line-height: 2rem;
+  font-size: 25px;
 
+}
+.textSubtitulo {
+ display: right;
+}
 .descripcion{
   display: flex;
   flex-direction: row;
