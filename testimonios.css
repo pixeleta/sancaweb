@@ -1,6 +1,6 @@
 *{
-  padding: 0;
-  margin: 0;
+  padding:0;
+  margin:0;
 }
 
 
@@ -24,7 +24,8 @@
     list-style: none;
     scroll-behavior: smooth;   /* Desplazamiento suave si usas botones de navegación */
     -webkit-overflow-scrolling: touch; /* Suavidad en dispositivos móviles */
-    scrollbar-width: none;
+    scrollbar-width: 
+none;
 }
 
 /* Cada elemento contenedor */
@@ -177,6 +178,7 @@ nav{
 .parrafo2{
  color: #034c91;
  padding-left: 30px;
+
 }
 
 .emojiHorizontal{
@@ -276,17 +278,19 @@ nav{
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: 15px;
+  border: radius 15px;
   padding: 20px;
   line-height: 2rem;
   font-size: 25px;
+
 }
 /*Cierre de estilos sobre nosotros*/
 
 
 /* Contenedor de Cursos */  
-
-.carta-container{
+.Titulos {
+  color: #fcfffe;
+  background-color: #1e3282;
   display: flex;
   flex-direction: column;
   align-items:start;
@@ -295,12 +299,31 @@ nav{
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.carta-container{
+  background-color: #1e3a8a;
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
 .carta{
+  color: #1e3a8a;
   display: flex;
   flex-direction: column  ;
   align-items:start;
-  background-color: #c1ebd5;
+  background-color: #eaedf1;
+  border-radius: 10px;
+  padding: 25px;
+  margin:10px;
+
+}
+.carta h1,.carta h2,.carta h3,.carta p{
+  padding: 5px;
+
 }
 
 .curso-content img{
