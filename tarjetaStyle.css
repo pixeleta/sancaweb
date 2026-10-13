@@ -3,7 +3,7 @@
   position: relative;
   width: 300px;
   height: 350px;
-  background-color: #ffffff;
+  background-color: #e0ecf5;
   border-radius: 40px;
   border:3px solid pink;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -25,6 +25,10 @@
   transition: transform 0.2s ease-in-out;
 }
 
+carta-container img {
+   padding: 10Px;
+}
+
 
 /* Panel deslizante con información adicional (oculto abajo por defecto) */
 .cortina {
@@ -33,9 +37,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #c1ebd5;
+  background-color: #20b0fe;
   color: #ffffff;
-  padding: 24px;
+  padding-top: 10px;
+  padding-left: 10%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -48,11 +53,10 @@
 }
 
 .cortina h4 {
-  margin: 0 0 12px 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #034c91;
-  color: #3498db;
+  
 }
 
 .cortina ul {
@@ -68,19 +72,20 @@
 }
 
 .btn {
-  background-color: #3498db;
-  color: white;
+  background-color: #10b981;
+  color: #034e91;
   border: none;
   padding: 10px 16px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.2s;
-  align-self: flex-start;
+  align-self: center;
+ 
 }
 
 .btn:hover {
-  background-color: #2980b9;
+  background-color: #f9fafb;
 }
 
 /* Efecto al pasar el mouse (Hover) */
@@ -102,10 +107,9 @@
    }
 .carta-container img{
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
-  
+  position: relative;
 
 
 }
