@@ -303,25 +303,41 @@ nav{
   background-color: #1e3a8a;
   display: flex;
   flex-direction: column;
-  align-items:start;
-  justify-content: center;
   gap: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.carta{
+.carta-izquierda{
   color: #1e3a8a;
   display: flex;
   flex-direction: column  ;
-  align-items:start;
+  align-self: flex-start;
   background-color: #eaedf1;
   border-radius: 10px;
   padding: 25px;
-  margin:10px;
+  margin-right:600px;
+  margin-left:40px;
 
 }
-.carta h1,.carta h2,.carta h3,.carta p{
+.carta-izquierda h1,.carta-izquierda h2,.carta-izquierda h3,.carta-izquierda p {
+  padding: 5px;
+
+}
+
+.carta-derecha{
+  color: #1e3a8a;
+  display: flex;
+  flex-direction: column ;
+  align-self: flex-end;
+  background-color: #eaedf1;
+  border-radius: 10px;
+  padding: 25px;
+  margin-left:600px;
+  margin-right:40px;
+
+}
+.carta-derecha h1,.carta-derecha h2,.carta-derecha h3,.carta-derecha p{
   padding: 5px;
 
 }
@@ -424,7 +440,7 @@ nav{
 }
 
 .footer-column{
-  color: white;
+  color: white;margin-left:600px;
   display: flex;
   text-align: center;
   padding-left: 50px;
