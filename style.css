@@ -420,6 +420,17 @@ nav{
   border-radius: 20px;
 }
 
+.fila2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Hace que se apile en pantallas chicas */
+  background-color: #c1ebd5;
+  padding: 10px 10px ;
+  border-radius: 20px;
+}
+
 .columna1, .columna2 {
   flex: 1;
   min-width: 300px; /* Evita que colapse en celulares */
@@ -427,6 +438,12 @@ nav{
 
 /* Tarjeta de datos de contacto */
 .contenedorUbicacion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contenedorUbicacion2 {
   display: flex;
   flex-direction: column;
   gap: 20px;
