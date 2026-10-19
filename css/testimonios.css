@@ -1,17 +1,4 @@
-*{
-  padding:0;
-  margin:0;
-}
-
-
-/*Fuente personalizada*/
-@font-face{
-  font-family:'Montserrat Bold Italic 700';
-  src: url(fonts/Montserrat\ Bold\ Italic\ 700.ttf);
-
-  font-family:'Inter Italic 400';
-  src: url(fonts/Inter\ Italic\ 400.ttf);
-}
+/* Los estilos de header, navbar, footer y WhatsApp están en css/layout.css */
 
 
 /* Contenedor principal del carrusel */
@@ -78,77 +65,7 @@ none;
 
 
 
-/*Estilos de Header y Navbar*/
-header{
-  background: #034c91;
-  font-family: 'Montserrat Bold Italic 700';    /* Donde se aloja el logo y los links*/
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  }
 
-nav{
-  display: flex;
-  flex-direction: row;
-  align-items: center;    /*todo su contenido de la barra*/
-  justify-content: space-between;
-  
-}
-
-
-.logo{
-  display: flex;
-  align-items: center;    /*alinea el contenido del div logo*/
-  gap: 10px ;
-  padding-left: 60px;
-}
-
-.logo span{
-  color: #e0ecf5;
-  font-size: 25px;     /*modifica el texto pegado al logo*/
-}
-
-.logo img{
-  display :flex;
-  align-self: center;   /*modifica al logo*/
-  height: 120px;
-}
-
-
-/*modificacion links del navbar*/
- ul{
-  display:flex;
-  flex-direction: row;
-  gap: 15px;
-  padding-right: 60px;
-  font-size: 25px;
-}
-
-.navbar li{
-  list-style: none;    /*le elimina el estilo de la lista*/
-}
-
-.navbar a{
-  text-decoration-line: none; /*a : significa los enlaces en el navbar - les quita el subrayado- */
-  color: #e0ecf5;
-}
-
-.navbar a:hover{
-  color: #7bd7a7;    /*le agrega color a cada enlace*/
-}
-
-/* cierre modificacion links del navbar*/
-
-#moreButton{
-  background: none;
-  padding: 0px 10px;
-  font-size: 25px;
-  cursor: pointer;
-  color: #e0ecf5;
-}
-
-
-/*Cierre de estilos Header y Navbar*/
 
 
 
@@ -296,8 +213,7 @@ nav{
   align-items:start;
   justify-content: center;
   gap: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 20px;   /* para que el texto no quede pegado al borde en celulares */
 }
 .carta-container{
   background-color: #1e3a8a;
@@ -415,35 +331,31 @@ nav{
 /* Cierre Mapa - Columna 2 */
 
 
-/* Pie de página */
-
+/* Footer compartido (css/layout.css): acá va pegado al bloque azul, sin el margen de 40px */
 .custom{
-  background-color: #1e3a8a;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+  margin-top: 0;
 }
 
-.cayetano{
-  display:flex;
-  align-content: center;
-  flex-direction: row;
+
+/* ==========================================
+   RESPONSIVE: las tarjetas de testimonios tenían
+   márgenes fijos de 600px que no entran en pantallas chicas
+   ========================================== */
+@media (max-width: 1100px) {
+  .carta-izquierda,
+  .carta-derecha {
+    align-self: stretch;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
-.social-icons{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  gap: 20px;
+@media (max-width: 600px) {
+  .carta-izquierda,
+  .carta-derecha {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 18px;
+    overflow-wrap: break-word; /* nombres y textos largos no desbordan */
+  }
 }
-
-.footer-column{
-  color: white;margin-left:600px;
-  display: flex;
-  text-align: center;
-  padding-left: 50px;
-}
-
-/* Cierre Pie de Página*/

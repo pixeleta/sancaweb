@@ -54,7 +54,7 @@
 {
 "id": 5,
 "titulo": "Diseño Gráfico Orientado a la Web",
-"subtitulo": "Convertite en diseñador Gráfico",
+"subtitulo": "Convertite en diseñador gráfico",
 "imagen": "img/iconoscursos/07_diseno_grafico.png",
 "modalidad": "Presencial",
 "duracion": "Anual",
@@ -67,7 +67,7 @@
 {
 "id": 6,
 "titulo": "Patronista y Confeccionista de Ropa de Bebé",
-"subtitulo": "Serás modista de Bebés y niños",
+"subtitulo": "Serás modista de bebés y niños",
 "imagen": "img/iconoscursos/09_costura.png",
 "modalidad": "Presencial",
 "duracion": "Anual",
@@ -80,7 +80,7 @@
 {
 "id": 7,
 "titulo": "Programación Python",
-"subtitulo": "Convertite en Programador",
+"subtitulo": "Convertite en programador",
 "imagen": "img/iconoscursos/11_programacion_python.png",
 "modalidad": "Presencial",
 "duracion": "Anual",
@@ -145,7 +145,7 @@
 {
 "id": 12,
 "titulo": "Mecánico de Bicicletas",
-"subtitulo": "Creá tu propia Bicicleta",
+"subtitulo": "Creá tu propia bicicleta",
 "imagen": "img/iconoscursos/03_mecanico_de_bicicletas.png",
 "modalidad": "Presencial",
 "duracion": "Anual",

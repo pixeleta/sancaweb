@@ -1,10 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto página</title>
+    <title>Inicio | CFP N.º 401 Vicente López</title>
+    <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/tarjetas-cursos.css" />
   </head>
   <body>
     <!--Encabezado y navegacion-->
@@ -13,7 +15,7 @@
       <nav>
         <div class="logo">
           <img src="img/cfp 401.png" alt="" />
-          <span>CFP Nº 401 Vicente Lopéz</span>
+          <span>CFP N.º 401 Vicente López</span>
         </div>
 
         <ul class="navbar">
@@ -38,7 +40,7 @@
             <div class="parrafo2">
               <br />
               <h2>
-                APRENDÉ Y CAPACITÁTE DE MANERA PROFESIONAL PARA AFRONTAR LOS DESAFÍOS QUE
+                APRENDÉ Y CAPACITATE DE MANERA PROFESIONAL PARA AFRONTAR LOS DESAFÍOS QUE
                 EL MERCADO LABORAL ACTUAL EXIGE HOY.
               </h2>
             </div>
@@ -95,8 +97,8 @@
     <div class="preparate-content">
       <h2 class="mundo">PREPARATE PARA EL MUNDO LABORAL</h2>
       <p class="cfp">
-        En el CFP 401 Vicente López te ofrecemos elegír el curso que más te interese, capacitarte para que comiences a desarrollar nuevas habilidades y mejores tus oportunidades laborales.
-        Con nuestros cursos vas aprender teoría y de forma práctica, adquirir conocimientos y nuevas herramientas para alcanzar tus objetivos.
+        En el CFP 401 Vicente López te ofrecemos elegir el curso que más te interese, capacitarte para que comiences a desarrollar nuevas habilidades y mejores tus oportunidades laborales.
+        Con nuestros cursos vas a aprender teoría y de forma práctica, adquirir conocimientos y nuevas herramientas para alcanzar tus objetivos.
       </p>
     </div>
 
@@ -111,122 +113,8 @@
     <h2>Cursos Disponibles</h2>
   </div>
 
-  <!-- Contenedor de tarjetas -->
-  <div class="carta-container">
-    
-    <!-- Tarjeta 1: Curso Costura -->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/09_costura.png" />
-       
-      </div>
-    </div>
-
-    <!-- Tarjeta 2: Curso Habilidades Digitales -->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/06_habilidades_digitales.png" />
-        
-      </div>
-    </div>
-
-    <!-- Tarjeta 3: Curso Diseño Gráfico -->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/07_diseno_grafico.png" />
-        
-      </div>
-    </div>
-
-     <!-- Tarjeta 4: Curso Diseño 3D -->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/08_diseno_3d.png" />
-        
-      </div>
-    </div>
-     
-    <!-- Tarjeta 5: Curso Costura -->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/09_costura.png" />
-        
-      </div>
-    </div>
-
-     <!-- Tarjeta 6: Curso Diseño Web -->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/10_diseno_web.png" />
-        
-      </div>
-    </div>
-
-     <!-- Tarjeta 7: Curso Programación Python-->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/11_programacion_python.png" />
-        
-      </div>
-    </div>
-
-     <!-- Tarjeta 8: Curso Aire Acondicionado -->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/12_aire_acondicionado.png" />
-        
-      </div>
-    </div>
-
-     <!-- Tarjeta 9: Curso Electricista -->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/13_electricidad.png" />
-        
-      </div>
-    </div>
-
-     <!-- Tarjeta 10: Curso Bijouterie -->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/02_bijouterie.png" />
-        
-      </div>
-    </div>
-
-     <!-- Tarjeta 11: Curso Tejido en Telar -->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/01_tejido_en_telar.png" />
-        
-      </div>
-    </div>
-
-     <!-- Tarjeta 12: Curso Mecánico de Bicicletas -->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/03_mecanico_de_bicicletas.png" />
-        
-      </div>
-    </div>
-
-     <!-- Tarjeta 13: Curso Reparación Pequeños Electrodomésticos -->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/04_reparacion_pequenos_electrodomesticos.png" />
-        
-      </div>
-    </div>
-
-    <!-- Tarjeta 14: Curso Diseño CAD -->
-    <div class="carta">
-      <div class="curso-content">
-        <img src="img/iconos/05_diseno_cad.png" />
-        
-      </div>
-    </div>
-
-  </div>
+  <!-- Contenedor de tarjetas: las genera script/cursos.js a partir de json/cursos.json -->
+  <div class="lista-cursos" id="lista-cursos"></div>
 </section>
       <!-- Fin seccion Cursos -->
 
@@ -245,7 +133,7 @@
       <div class="contenedorUbicacion">
         <p class="dato-contacto">
           <img src="img/home.png"/> 
-          <strong>CFP N° 401 - Escuela de Oficios San Cayetano</strong>
+          <strong>CFP N.º 401 - Escuela de Oficios San Cayetano</strong>
         </p>
         
         <p class="dato-contacto">
@@ -300,7 +188,7 @@
 
     <!-- Derechos reservados -->
     <div class="footer-column">
-      <p>&copy; CFP N° 401 Escuela de Oficios - San Cayetano. Hecho por los alumnos de Diseño Web - 2026</p>
+      <p>&copy; CFP N.º 401 Escuela de Oficios - San Cayetano. Hecho por los alumnos de Diseño Web - 2026</p>
     </div>
 
     <!-- Redes sociales -->
@@ -317,5 +205,6 @@
 </footer>
 
     <script src="script.js"></script>
+    <script src="script/cursos.js"></script>
   </body>
 </html>

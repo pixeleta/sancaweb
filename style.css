@@ -1,17 +1,4 @@
-*{
-  padding: 0;
-  margin: 0;
-}
-
-
-/*Fuente personalizada*/
-@font-face{
-  font-family:'Montserrat Bold Italic 700';
-  src: url(fonts/Montserrat\ Bold\ Italic\ 700.ttf);
-
-  font-family:'Inter Italic 400';
-  src: url(fonts/Inter\ Italic\ 400.ttf);
-}
+/* Los estilos de header, navbar, footer y WhatsApp están en css/layout.css */
 
 
 /* Contenedor principal del carrusel */
@@ -77,111 +64,7 @@
 
 
 
-/*Estilos de Header y Navbar*/
-header{
-  background: #034c91;
-  font-family: 'Montserrat Bold Italic 700';    /* Donde se aloja el logo y los links*/
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  }
 
-nav{
-  display: flex;
-  flex-direction: row;
-  align-items: center;    /*todo su contenido de la barra*/
-  justify-content: space-between;
-  max-width: 1300px; /* Evita que se estire demasiado en pantallas gigantes */
-  margin: 0 auto;
-  padding: 10px 20px; /* Padding uniforme y seguro para cualquier pantalla */
-}
-
-
-.logo{
-  display: flex;
-  align-items: center;    /*alinea el contenido del div logo*/
-  gap: 10px ;
-}
-
-.logo span{
-  color: #e0ecf5;
-  font-size: clamp(1rem, 2vw, 1.4rem); /* Tamaño fluido: se adapta dinámicamente sin romperse */
-  font-weight: 750;     
-}
-
-.logo img{
-  height: 70px; 
-  width: auto;   /* Mantiene la proporción de la imagen automáticamente */
-}
-
-
-/*modificacion links del navbar*/
- ul{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li{
-  list-style: none;    /*le elimina el estilo de la lista*/
-}
-
-.navbar a{
-  text-decoration-line: none; /*a : significa los enlaces en el navbar - les quita el subrayado- */
-  color: #e0ecf5;
-  font-size: 1rem; /* Tamaño base cómodo */
-  transition: color 0.2s ease;
-}
-
-.navbar a:hover{
-  color: #7bd7a7;    /*le agrega color a cada enlace*/
-}
-
-/* cierre modificacion links del navbar*/
-
-#moreButton{
-  background: none;
-  border: none;
-  padding: 5px 10px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: #e0ecf5;
-}
-
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column; /* Apila el logo arriba y el menú abajo en celulares */
-    gap: 15px;
-    padding: 15px;
-  }
-
-  .logo {
-    padding-left: 0; /* Quitamos el padding fijo en mobile */
-    justify-content: center;
-  }
-
-  .logo img {
-    height: 55px; /* Logo más chico para que entre cómodo en celulares */
-  }
-
-  .navbar {
-    flex-wrap: wrap; /* Permite que los links bajen si no entran en una sola línea */
-    justify-content: center;
-    gap: 12px;
-    padding-right: 0;
-  }
-
-  .navbar a, #moreButton {
-    font-size: 0.95rem; /* Achica un poco los textos para ahorrar espacio */
-  }
-}
-
-
-/*Cierre de estilos Header y Navbar*/
 
 
 
@@ -337,7 +220,9 @@ nav{
 .tituloCursos h2 {
   display: flex;
   align-items: center;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
   height: 200px;
   border: 1px solid black;
   margin: 20px auto 5px;
@@ -487,9 +372,9 @@ nav{
   border-radius: 20px;
 }
 
-.columna1, .columna2 {
+.columna1, .columna2, .columna3 {
   flex: 1;
-  min-width: 300px; /* Evita que colapse en celulares */
+  min-width: min(300px, 100%); /* Evita que colapse, pero sin pasarse del ancho en celulares chicos */
 }
 
 /* Tarjeta de datos de contacto */
@@ -547,119 +432,100 @@ nav{
 
 /* Cierre Datos - Columna 1 y 2 */
 
+/* contacto.html area de contacto */
 
-/* Pie de página */
-
-/* Estilo general del Footer */
-.custom {
-  background-color: #034c91; /* Coincide con el color principal de tu header */
-  color: #e0ecf5;
-  padding: 40px 20px;
-  margin-top: 40px;
-}
-
-/* Contenedor principal que agrupa los elementos */
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap; /* Permite que se acomode en pantallas chicas */
+/* Información de contacto (Sobre nosotros) */
+.contacto-info{
+  background-color: #1e3282;
+  color: #fcfffe;
   text-align: center;
+  padding: 40px 20px;
 }
 
-/* Logo del footer */
-.footer-logo .cayetano {
-  height: 100px; 
-  width: auto;
+.contacto-info h2{
+  margin-bottom: 10px;
 }
 
-/* Texto de derechos reservados */
-.footer-column p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
+.contacto-info p{
+  margin-bottom: 25px;
 }
 
-/* Contenedor de iconos sociales */
-.social-icons {
+.contacto-info__enlaces{
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;           /* en celulares los botones bajan de a uno */
+  justify-content: center;
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.social-icons a {
+.contacto-info__enlaces a{
   display: inline-block;
-  transition: transform 0.2s ease;
+  padding: 12px 24px;
+  border-radius: 24px;       /* botones con radio 24px según la hoja de ruta */
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.social-icons a:hover {
-  transform: scale(1.1); /* Efecto de zoom sutil al pasar el cursor */
+.contacto-info__enlaces a:hover,
+.contacto-info__enlaces a:focus-visible{
+  transform: translateY(-2px);
+}
+/* Botón principal: inscripción */
+.enlace-inscripcion{
+  background-color: #10b981;
+  color: #1e3a8a;
 }
 
-.social-icons img {
-  width: 50px; 
-  height: auto;
+.enlace-inscripcion:hover{
+  background-color: #c1ebd5;
 }
+
+/* Botones secundarios: catálogo y redes */
+.enlace-contacto{
+  background-color: #eaedf1;
+  color: #1e3a8a;
+}
+
+.enlace-contacto:hover{
+  background-color: #c1ebd5;
+}
+
+
+/*  cierre de contacto.html area de contacto */
+
 
 /* ==========================================
-   DISEÑO RESPONSIVO (Para celulares)
+   RESPONSIVE: celulares
    ========================================== */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column; /* Apila los elementos verticalmente en móviles */
-    justify-content: center;
-    gap: 25px;
+@media (max-width: 600px) {
+  .conjunto,
+  .parrafo2 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .cursos-section,
+  .contacto-section,
+  .preparate-section {
+    padding: 40px 15px;
+  }
+
+  .alinear-contacto h2 {
+    font-size: 1.5rem;
+  }
+
+  .mundo {
+    font-size: 1.5rem;
+  }
+
+  .map-container {
+    height: 300px; /* mapa un poco más bajo en celulares */
+  }
+
+  .contacto-info__enlaces a {
+    width: 100%;           /* botones de contacto a todo el ancho, uno debajo del otro */
+    box-sizing: border-box;
   }
 }
-
-/* Cierre Pie de Página*/
-
-
-
-/* Botón flotante de WhatsApp */
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;   /* Distancia desde el borde inferior de la pantalla */
-  right: 25px;    /* Distancia desde el borde derecho */
-  border-radius: 50%;
-  width: 60px;    /* Ancho estándar adaptable */
-  height: 60px;   /* Alto estándar adaptable */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  z-index: 9999;  /* Asegura que esté siempre por encima del mapa, footer y secciones */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Tamaño de la imagen dentro del botón */
-.whatsapp-float img {
-  width: 45px;    /* Tamaño del ícono interior */
-  height: auto;
-}
-
-/* Efecto al pasar el cursor (Hover) */
-.whatsapp-float:hover {
-  transform: scale(1.1); /* Efecto de zoom sutil */
-}
-
-/* Responsive */
-
-@media (max-width: 768px) {
-  .whatsapp-float {
-    bottom: 20px;
-    right: 20px;
-    width: 55px;  /* Ligeramente más chico en móviles para no estorbar */
-    height: 55px;
-  }
-  
-  .whatsapp-float img {
-    width: 30px;
-  }
-}
-
-/* Cierre Botón flotante de WhatsApp */
-

@@ -1,0 +1,155 @@
+/* ==========================================================
+   tarjetas-cursos.css - Tarjetas de cursos (con la cortina que se desliza)
+   Se usa en index.html (sección "Cursos disponibles") y en cursos.html.
+   Las tarjetas las genera script/cursos.js dentro de #lista-cursos.
+   ========================================================== */
+
+/* Contenedor de tarjetas *//* Contenedor principal de la tarjeta */
+.lista-cursos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 24px 5%;
+    padding: 0 20px 20px;
+}
+.fondo {
+  position: relative;
+  background-color: #e0ecf5;
+  border-radius: 40px;
+  border:3px solid pink;
+  overflow: hidden; /* Oculta lo que salga de los límites de la tarjeta */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-direction: column;
+  padding: 25px;
+  /* Tamaño fijo para que todas las tarjetas sean iguales y la cortina entre completa */
+  width: min(320px, 100%);
+  min-height: 440px;
+  box-sizing: border-box;
+}
+
+/* Contenido principal (parte superior) */
+.fondo  {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+  margin:0.5% 0% 2% 0% ;
+}
+
+/* Panel deslizante con información adicional (oculto abajo por defecto) */
+.cortina {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #20b0fe;
+  color: #ffffff;
+  padding: 10%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  
+  /* Posicionamiento inicial fuera de la vista por debajo */
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cortina h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #034c91;
+  
+}
+
+.cortina ul {
+  display:inherit;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 20px 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  gap: 6px; /* antes lo daba el selector global ul{gap:20px}, que pasó a .navbar */
+}
+
+.cortina li{
+  color: #034c91;
+ 
+}
+
+.btn {
+  background-color: #10b981;
+  color: #034e91;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  align-self: center;
+  text-decoration: none; /* ahora el botón es un <a> */
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #f9fafb;
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.fondo:hover .cortina {
+  transform: translateY(0); /* Desliza el panel hacia arriba ocupando toda la tarjeta */
+}
+
+/*imagen de la tarjeta (antes .carta-container)--------------------------------------------------*/
+
+.curso-imagen{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.curso-imagen img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 100%; /* que el icono nunca se salga de la tarjeta */
+  height: auto;
+}
+
+
+/*------- Extras: subtítulo, teclado, celulares y mensaje de error -------*/
+
+/* Subtítulo de cada curso (campo "subtitulo" del JSON) */
+.cortina .subtitulo{
+  text-align: center;
+  color: #034c91;
+  font-size: 0.95rem;
+  margin: 4px 0 14px;
+}
+
+/* Cortina visible también con teclado (Tab) */
+.fondo:focus-visible .cortina,
+.fondo:has(.btn:focus-visible) .cortina{
+  transform: translateY(0);
+}
+
+.fondo:focus-visible{
+  outline: 3px solid #034c91;
+  outline-offset: 3px;
+}
+
+/* En celulares/tablets no existe el hover: la cortina se abre al tocar la tarjeta */
+@media (hover: none){
+  .fondo.activa .cortina{
+    transform: translateY(0);
+  }
+}
+
+/* Mensaje si no se pudo cargar cursos.json */
+.mensaje-error{
+  color: #034c91;
+  text-align: center;
+  padding: 40px 20px;
+}
