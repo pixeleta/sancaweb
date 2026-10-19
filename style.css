@@ -303,6 +303,22 @@ nav{
 
 
 /* Contenedor de Cursos */  
+/*lili-lili-lili-lili*/ 
+
+.agrupacion {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; 
+  background: grey;
+  border: 1px solid black;
+  margin: 15px 20px;
+  margin-top: 5px;
+
+
+
+}
 
 /* Sección general */
 .cursos-section {
@@ -321,6 +337,24 @@ nav{
 .tituloCursos h2 {
   display: flex;
   align-items: center;
+  width: 400px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 20px auto 5px;
+  padding-top: 50px    ;
+
+}
+
+.carta-container centro{
+  text-align: center;
+}
+
+.carta-container h4 {
+    overflow-wrap: break-word;
+
+}
+.carta-container h1 {
+  font-size: 20px;
   justify-content: center;
   gap: 15px;
   color: #034c91;
@@ -340,6 +374,28 @@ nav{
 /* Contenedor de cartas responsivo */
 .carta-container {
   display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.caja {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #c1ebd5;
+}
+
+.curso-content img{
+  width: 200px;
+  height: 200px;
+}
+
+.tituloCursos{
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap; /* Se adapta a celulares */

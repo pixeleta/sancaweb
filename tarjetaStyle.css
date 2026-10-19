@@ -1,0 +1,112 @@
+/* Contenedor principal de la tarjeta */
+.fondo {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background-color: #e0ecf5;
+  border-radius: 40px;
+  border:3px solid pink;
+  overflow: hidden; /* Oculta lo que salga de los límites de la tarjeta */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* Contenido principal (parte superior) */
+.fondo  {
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+carta-container img {
+   padding: 10Px;
+}
+
+
+/* Panel deslizante con información adicional (oculto abajo por defecto) */
+.cortina {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #20b0fe;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-left: 10%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  
+  /* Posicionamiento inicial fuera de la vista por debajo */
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cortina h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #034c91;
+  
+}
+
+.cortina ul {
+  margin: 0 0 20px 0;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.cortina li{
+  color: #034c91;
+ 
+}
+
+.btn {
+  background-color: #10b981;
+  color: #034e91;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  align-self: center;
+ 
+}
+
+.btn:hover {
+  background-color: #f9fafb;
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.fondo:hover .cortina {
+  transform: translateY(0); /* Desliza el panel hacia arriba ocupando toda la tarjeta */
+}
+
+.fondo:hover .tarjeta-curso__contenido {
+  transform: translateY(-20px); /* Opcional: desplaza sutilmente el contenido original hacia arriba */
+  opacity:  0.1; /* Lo atenúa para dar protagonismo al detalle */
+}
+
+
+/*imagen modificacion carta-container--------------------------------------------------*/
+
+.carta-container{
+  display: flex;
+  flex-direction: column;
+   }
+.carta-container img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+
+}
