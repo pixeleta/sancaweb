@@ -17,12 +17,10 @@ async function cargarTestimonios() {
                    
     
                     
-                    <h3>Curso:${testimonio["Curso al que te inscribiste "]}</h3>
-                    <h4>Testimonio:${testimonio["Tu testimonio"]}</h4>
-                    <p><h3>Nombre:${testimonio["Nombre y apellido (opcional)"]}</h3></p>
-                    <p><h3>Año de cursada:${testimonio["Año en el que pasaste por sanca "]}</h3></p>
-                    <p></p>
-                    <p></p>
+                    <h3>Curso: ${testimonio["Curso al que te inscribiste "]}</h3>
+                    <p>Testimonio: ${testimonio["Tu testimonio"]}</p>
+                    <p>Nombre: ${testimonio["Nombre y apellido (opcional)"]}</p>
+                    <p>Año de cursada: ${testimonio["Año en el que pasaste por sanca "]}</p>
                     
                 </div>
             `;
@@ -34,13 +32,10 @@ async function cargarTestimonios() {
                    
     
                     
-                    <h3>Curso:${testimonio["Curso al que te inscribiste "]}</h3>
-                    <h4>Testimonio:${testimonio["Tu testimonio"]}</h4>
-                    <p><h3>Nombre:${testimonio["Nombre y apellido (opcional)"]}</h3></p>
-                    <p><h3>Año de cursada:${testimonio["Año en el que pasaste por sanca "]}</h3></p>
-                    <p></p>
-                    <p></p>
-                    
+                    <h3>Curso: ${testimonio["Curso al que te inscribiste "]}</h3>
+                    <p>Testimonio: ${testimonio["Tu testimonio"]}<p>
+                    <p>Nombre: ${testimonio["Nombre y apellido (opcional)"]}</p>
+                    <p>Año de cursada: ${testimonio["Año en el que pasaste por sanca "]}</p>                    
                 </div>
             `;
 

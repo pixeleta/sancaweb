@@ -27,7 +27,6 @@ async function cargarCursos() {
 
                 <div class="cortina">
                     <h4><B>${curso["titulo"]}</B></h4>
-                    <p class="subtitulo">${curso["subtitulo"]}</p>
                     <ul>
                         <li><b>Duración:</b> ${curso["duracion"]}</li>
                         <li><b>Modalidad:</b> ${curso["modalidad"]}</li>

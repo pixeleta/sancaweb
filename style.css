@@ -220,14 +220,10 @@
 .tituloCursos h2 {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 400px;
   box-sizing: border-box;
-  height: 200px;
-  border: 1px solid black;
-  margin: 20px auto 5px;
-  padding-top: 50px    ;
-
 }
 
 .carta-container centro{
@@ -330,7 +326,7 @@
   margin-bottom: 40px;
 }
 
-.alinear-contacto h2 {
+.alinear-contacto h2,.tituloCursos h2 {
   display: flex;
   align-items: center;
   justify-content: center;
